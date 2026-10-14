@@ -1,0 +1,3 @@
+# Gateway libraries (same versions as iam-gateway) - only for tests/gateway_check.py, use a separate venv
+pymodbus==2.5.2
+pyModbusTCP==0.1.10

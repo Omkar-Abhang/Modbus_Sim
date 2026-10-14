@@ -1,0 +1,12 @@
+services:
+  modbus-simulator:
+    build: .
+    container_name: modbus-device-simulator
+    restart: unless-stopped
+    ports:
+      - "15001:15001"   # web UI / API
+      - "5020:5020"     # Modbus TCP (gateway polls this)
+    environment:
+      - PUBLIC_HOST=${PUBLIC_HOST:-}   # PC IP shown in the gateway helper, e.g. PUBLIC_HOST=10.129.2.26 docker compose up -d
+    volumes:
+      - ./data:/app/data               # templates and devices survive rebuilds

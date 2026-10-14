@@ -1,0 +1,8 @@
+.venv
+.venv-gw
+data
+.env
+**/__pycache__
+.pytest_cache
+ui/node_modules
+ui/dist
